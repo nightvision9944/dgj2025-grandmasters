@@ -1,26 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bok2it05kyvfh"]
+[gd_scene load_steps=4 format=3 uid="uid://bok2it05kyvfh"]
 
 [ext_resource type="Script" path="res://scripts/rock.gd" id="1_7ochq"]
+[ext_resource type="Script" path="res://scripts/paper.gd" id="2_p0juh"]
+[ext_resource type="Script" path="res://scripts/scissors.gd" id="3_ejhvg"]
 
 [node name="main" type="Node2D"]
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 236.0
-offset_top = 163.0
-offset_right = 430.0
-offset_bottom = 381.0
+offset_left = 299.0
+offset_top = 300.0
+offset_right = 499.0
+offset_bottom = 300.0
 size_flags_stretch_ratio = 2.3
 theme_override_constants/h_separation = 100
 columns = 3
 
-[node name="Control" type="Control" parent="GridContainer"]
+[node name="rock" type="Control" parent="GridContainer"]
 layout_mode = 2
 script = ExtResource("1_7ochq")
 
-[node name="Control2" type="Control" parent="GridContainer"]
+[node name="paper" type="Control" parent="GridContainer"]
 layout_mode = 2
-script = ExtResource("1_7ochq")
+script = ExtResource("2_p0juh")
 
-[node name="Control3" type="Control" parent="GridContainer"]
+[node name="scissors" type="Control" parent="GridContainer"]
 layout_mode = 2
-script = ExtResource("1_7ochq")
+script = ExtResource("3_ejhvg")
