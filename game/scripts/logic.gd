@@ -1,11 +1,17 @@
 extends Node
+@export var ButtonType: int = 0
 
-var rng=RandomNumberGenerator.new()
 func _ready():
-	var rock = 0
-	var paper = 1
-	var scissors = 2
-	var my_random_number = rng.randi_range(0, 2)
-	
-	
+	var button = Button.new()
+	if ButtonType == 0:
+		button.text = "🪨"
+	elif ButtonType == 1:
+		button.text = "📝"
+	else:
+		button.text = "✂️"
+	button.pressed.connect(_button_pressed)
+	add_child(button)
+
+func _button_pressed():
+	return ButtonType
 	
