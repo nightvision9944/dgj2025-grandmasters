@@ -1,15 +1,26 @@
-[gd_scene format=3 uid="uid://bok2it05kyvfh"]
+[gd_scene load_steps=2 format=3 uid="uid://bok2it05kyvfh"]
+
+[ext_resource type="Script" path="res://scripts/rock.gd" id="1_7ochq"]
 
 [node name="main" type="Node2D"]
 
-[node name="CheckButton" type="CheckButton" parent="."]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 46.0
-offset_bottom = 26.0
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 236.0
+offset_top = 163.0
+offset_right = 430.0
+offset_bottom = 381.0
+size_flags_stretch_ratio = 2.3
+theme_override_constants/h_separation = 100
+columns = 3
 
-[node name="Button" type="Button" parent="."]
-offset_left = 18.0
-offset_top = 43.0
-offset_right = 26.0
-offset_bottom = 51.0
+[node name="Control" type="Control" parent="GridContainer"]
+layout_mode = 2
+script = ExtResource("1_7ochq")
+
+[node name="Control2" type="Control" parent="GridContainer"]
+layout_mode = 2
+script = ExtResource("1_7ochq")
+
+[node name="Control3" type="Control" parent="GridContainer"]
+layout_mode = 2
+script = ExtResource("1_7ochq")
