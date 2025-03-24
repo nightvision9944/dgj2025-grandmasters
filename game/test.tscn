@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmvlhgdtafiu7"]
+
+[ext_resource type="Script" path="res://scripts/logic.gd" id="1_niani"]
+[ext_resource type="Script" path="res://button.gd" id="2_nqmom"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_niani")
+
+[node name="score" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 75.0
+offset_right = 174.0
+offset_bottom = 115.0
+
+[node name="rock" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 125.0
+offset_right = 68.0
+offset_bottom = 133.0
+script = ExtResource("2_nqmom")
+
+[node name="paper" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 160.0
+offset_right = 68.0
+offset_bottom = 168.0
+script = ExtResource("2_nqmom")
+ButtonType = 1
+
+[node name="scissors" type="Button" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 195.0
+offset_right = 68.0
+offset_bottom = 203.0
+script = ExtResource("2_nqmom")
+ButtonType = 2
+
+[connection signal="pressed" from="rock" to="." method="_button_pressed"]
+[connection signal="pressed" from="paper" to="." method="_button_pressed"]
+[connection signal="pressed" from="scissors" to="." method="_button_pressed"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bok2it05kyvfh"]
+[gd_scene load_steps=3 format=3 uid="uid://bok2it05kyvfh"]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_d3ke6"]
 [ext_resource type="Script" path="res://scripts/logic.gd" id="2_6hsy2"]
 [ext_resource type="Texture2D" uid="uid://dj8wj2e2q245e" path="res://assets/tabletop.jpg" id="4_4a1nl"]
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_d3ke6")
+script = ExtResource("2_6hsy2")
 
 [node name="tabletop" type="Sprite2D" parent="."]
 position = Vector2(451, 302)

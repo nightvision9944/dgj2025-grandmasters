@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://jga8c6aw5tlp"]
+
+[ext_resource type="Texture2D" uid="uid://dj8wj2e2q245e" path="res://assets/tabletop.jpg" id="1_e4l4g"]
+[ext_resource type="Script" path="res://start.gd" id="2_a126h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tabletop" type="Sprite2D" parent="."]
+position = Vector2(402.5, 302.5)
+scale = Vector2(0.170244, 0.192866)
+texture = ExtResource("1_e4l4g")
+
+[node name="ColorRect" type="ColorRect" parent="Tabletop"]
+offset_left = -2364.0
+offset_top = -1568.0
+offset_right = 2359.0
+offset_bottom = 1569.0
+color = Color(0.0475577, 0.0475576, 0.0475576, 0.568627)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 255.0
+offset_top = 100.0
+offset_right = 408.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+text = "Rock Paper Scissors"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 363.0
+offset_bottom = 360.0
+text = "Start"
+script = ExtResource("2_a126h")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 555.0
+offset_bottom = 360.0
+text = "Exit
+"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
