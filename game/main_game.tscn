@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmvlhgdtafiu7"]
 
-[ext_resource type="Script" path="res://scripts/logic.gd" id="1_niani"]
-[ext_resource type="Script" path="res://button.gd" id="2_nqmom"]
+[ext_resource type="Script" path="res://scripts/logic.gd" id="1_o3mxb"]
+[ext_resource type="Script" path="res://button.gd" id="2_65qk4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_niani")
+script = ExtResource("1_o3mxb")
 
 [node name="score" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -25,7 +25,7 @@ offset_left = 60.0
 offset_top = 125.0
 offset_right = 68.0
 offset_bottom = 133.0
-script = ExtResource("2_nqmom")
+script = ExtResource("2_65qk4")
 
 [node name="paper" type="Button" parent="."]
 layout_mode = 0
@@ -33,8 +33,7 @@ offset_left = 60.0
 offset_top = 160.0
 offset_right = 68.0
 offset_bottom = 168.0
-script = ExtResource("2_nqmom")
-ButtonType = 1
+script = ExtResource("2_65qk4")
 
 [node name="scissors" type="Button" parent="."]
 layout_mode = 0
@@ -42,8 +41,11 @@ offset_left = 60.0
 offset_top = 195.0
 offset_right = 68.0
 offset_bottom = 203.0
-script = ExtResource("2_nqmom")
-ButtonType = 2
+script = ExtResource("2_65qk4")
+
+[node name="DisplaySprite" type="Sprite2D" parent="."]
+position = Vector2(556, 250)
+scale = Vector2(0.05, 0.05)
 
 [connection signal="pressed" from="rock" to="." method="_button_pressed"]
 [connection signal="pressed" from="paper" to="." method="_button_pressed"]

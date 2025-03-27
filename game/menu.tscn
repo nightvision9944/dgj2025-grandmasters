@@ -11,10 +11,12 @@ scale = Vector2(0.170244, 0.192866)
 texture = ExtResource("1_e4l4g")
 
 [node name="ColorRect" type="ColorRect" parent="Tabletop"]
+anchors_preset = -1
+anchor_bottom = 0.005
 offset_left = -2364.0
 offset_top = -1568.0
 offset_right = 2359.0
-offset_bottom = 1569.0
+offset_bottom = 1553.16
 color = Color(0.0475577, 0.0475576, 0.0475576, 0.568627)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

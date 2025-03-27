@@ -3,8 +3,16 @@ extends Control
 var score = 0
 var rng=RandomNumberGenerator.new()
 
+@onready var display_sprite = $DisplaySprite
+var rock_texture = preload("res://assets/rock.png")
+var paper_texture = preload("res://assets/paper.png")
+var scissors_texture = preload("res://assets/scissors.png")
 func _ready():
 	$score.text = "Score: " + str(score)
+	var rock_button = $rock
+	var paper_button = $paper
+	var scissors_button = $sci
+	
 func _button_pressed():
 	var i = rng.randi_range(0, 2)
 	if ButtonType == i:
