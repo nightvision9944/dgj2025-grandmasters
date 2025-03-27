@@ -1,28 +1,23 @@
 extends Node
-
+var scene = preload("res://stats.tscn")
 func _on_pressed():
 	get_tree().change_scene_to_file('res://test.tscn')
 
-func save():
-	var save_d = {
-		"lifetime_wins": Score.life_wins,
-		"lifetime_losses": Score.life_loss
-	}
-	return save_d
+#var score_data = {}
+#var config = ConfigFile.new()
+#var err = config.load('user://scores.cfg')
 
-func save_game():
-	var save_file = FileAccess.open("res://user/stats.save", FileAccess.WRITE)
-	Score.life_wins += Score.wins
-	Score.life_loss += Score.loss
-	var data = save()
-	var string = JSON.stringify(data)
-	
-	save_file.store_line(string)
+#if err != OK:
+#	return
+
+
 
 func _on_quit():
-	save_game()
+	
 	get_tree().quit()
 
 
 func _on_stats():
-	print(Score.wins, ", ", Score.loss)
+	var instance = scene.instantiate()
+	add_child(instance)
+	#print(Score.wins, ", ", Score.loss)

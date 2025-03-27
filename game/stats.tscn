@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8tlnb0dkf61b"]
+
+[ext_resource type="Script" path="res://display.gd" id="1_jib0k"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+offset_bottom = 0.199989
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jib0k")
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(200, 100)
+
+[node name="local_wins" type="RichTextLabel" parent="Window"]
+modulate = Color(0, 0, 0, 1)
+offset_right = 256.0
+offset_bottom = 24.0
+text = "0
+"
+
+[node name="local_loss" type="RichTextLabel" parent="Window"]
+modulate = Color(0, 0, 0, 1)
+offset_top = 24.0
+offset_right = 256.0
+offset_bottom = 48.0
+text = "0
+"
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
